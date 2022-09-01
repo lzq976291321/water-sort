@@ -23,45 +23,12 @@
   width: 132px;
   text-align: center;
   border-radius: 7px;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 12px 0;
 }
 .btn span {
   position: relative;
   z-index: 1;
-}
-.btn svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  fill: var(--c-active);
-}
-.btn svg circle {
-  transition: transform var(--duration, 0.25s) ease-out;
-}
-.btn svg circle.top-left {
-  transform: translate(var(--spacing, -16px), var(--spacing, -40px));
-}
-.btn svg circle.middle-bottom {
-  transform: translate(var(--spacing, 8px), var(--spacing, 40px));
-}
-.btn svg circle.top-right {
-  transform: translate(var(--spacing, 40px), var(--spacing, -40px));
-}
-.btn svg circle.right-bottom {
-  transform: translate(var(--spacing, 4px), var(--spacing, 40px));
-}
-.btn svg circle.left-bottom {
-  transform: translate(var(--spacing, -40px), var(--spacing, 40px));
-}
-.btn:hover {
-  --spacing: 0;
-  --duration: .45s;
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
 }
 *:before, *:after {
   box-sizing: inherit;
@@ -99,18 +66,6 @@
     overflow-x: hidden;
     display: none;
 }
-#menu-heading {
-    border: 1px solid #fff;
-    border-radius: 20px;
-    position: relative;
-    text-align: center;
-    background-color: rgba(0, 255, 255, 0.5);
-    font-family: 'Water Splash', sans-serif;
-    font-size: 30px;
-    color: #535353;
-    margin: 12px 10%;
-    padding: 8px;
-}
 #particles-js {
     background: rgb(115, 187, 255);
     height: 100vh;
@@ -125,10 +80,6 @@
     overflow: hidden;
     transition: 1s linear;
     transform: rotate(0deg);
-}
-@keyframes glassAnim {
-    0%,100% {transform: scale(1);}
-    50% {transform: scale(1.5);}
 }
 
 .colors {
@@ -216,64 +167,6 @@
     font-size: 20px;
 }
 
-#rules-btn {
-    position: fixed;
-    left: calc(100vw - 200px);
-    top: calc(100vh - 50px);
-    height: 50px;
-    width: 200px;
-    background-color: lightgreen;
-    border-radius: 20px 0 0 20px;
-    text-align: center;
-    font-size: 25px;
-    font-weight: 500;
-}
-
-#rules-page {
-    display: none;
-    z-index: 1000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0,0,0,0.5);
-    opacity: 0;
-    transition: 0.5s linear;
-}
-
-#rules {
-    border: 1px solid rgb(255, 255, 255);
-    position: absolute;
-    top: 100px;
-    left: 50px;
-    height: calc(100vh - 200px);
-    width: calc(100vw - 100px);
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
-}
-
-#rules-heading {
-    position: absolute;
-    top: 10px;
-    left: 0;
-    height: 30px;
-    width: 100%;
-    font-size: 30px;
-    font-weight: 800;
-    text-align: center;
-}
-
-#rules-text {
-    position: absolute;
-    top: 70px;
-    left: 5%;
-    width: 90%;
-    font-size: 20px;
-    height: calc(100vh - 200px - 150px);
-    overflow-x: hidden;
-}
-
 #back {
     position: absolute;
     top: calc(100% - 120px + 65px + 10px);
@@ -294,10 +187,7 @@
     text-align: center;
     font-size: calc(8px + 10 * ((100vw - 280px) / 920));
 }
-#cr2 {
-  margin-top: 50px;
-  display: none;
-}
+
 @media only screen and (min-width: 280px) {
     .game-buttons {
       font-size: calc(12px + 13 * ((100vw - 280px) / 920));

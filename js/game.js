@@ -92,8 +92,6 @@ window.OpenLevel = function (x) {
   won = false
   document.getElementById("menu").style.display = "none"
   level.style.display = "block"
-  // document.getElementById("cr1").style.display = "none";
-  // document.getElementById("cr2").style.display = "block";
   level.innerHTML = ""
   water = []
   // x + 3 = 关卡的有水的杯子数量
@@ -148,43 +146,7 @@ function ApplyInfo(a = water) {
     }
     level.innerHTML += `<button id="restart" class = "btn game-buttons" onclick = "Restart();">
                         <span>RESTART</span>
-                        <svg preserveAspectRatio="none" viewBox="0 0 132 45">
-                            <g clip-path="url(#clip)" filter="url(#goo-big)">
-                                <circle class="top-left" cx="49.5" cy="-0.5" r="26.5" />
-                                <circle class="middle-bottom" cx="70.5" cy="40.5" r="26.5" />
-                                <circle class="top-right" cx="104" cy="6.5" r="27" />
-                                <circle class="right-bottom" cx="123.5" cy="36.5" r="26.5" />
-                                <circle class="left-bottom" cx="16.5" cy="28" r="30" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip">
-                                    <rect width="132" height="45" rx="7" />
-                                </clipPath>
-                            </defs>
-                        </svg>
                     </button>
-                    <svg width="0" height="0">
-                        <defs>
-                            <filter id="goo" x="-50%" width="200%" y="-50%" height="200%"
-                                color-interpolation-filters="sRGB">
-                                <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
-                                <feColorMatrix in="blur" mode="matrix"
-                                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" />
-                            </filter>
-                            <filter id="goo-light" x="-50%" width="200%" y="-50%" height="200%"
-                                color-interpolation-filters="sRGB">
-                                <feGaussianBlur in="SourceGraphic" stdDeviation="1.25" result="blur" />
-                                <feColorMatrix in="blur" mode="matrix"
-                                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" />
-                            </filter>
-                            <filter id="goo-big" x="-50%" width="200%" y="-50%" height="200%"
-                                color-interpolation-filters="sRGB">
-                                <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
-                                <feColorMatrix in="blur" mode="matrix"
-                                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" />
-                            </filter>
-                        </defs>
-                    </svg>
                     <button id="home" class = "btn game-buttons" onclick = "ShowMenu();">
                         <span>HOME</span>
                         <svg preserveAspectRatio="none" viewBox="0 0 132 45">
@@ -202,28 +164,6 @@ function ApplyInfo(a = water) {
                             </defs>
                         </svg>
                     </button>
-                    <svg width="0" height="0">
-                        <defs>
-                            <filter id="goo" x="-50%" width="200%" y="-50%" height="200%"
-                                color-interpolation-filters="sRGB">
-                                <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
-                                <feColorMatrix in="blur" mode="matrix"
-                                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" />
-                            </filter>
-                            <filter id="goo-light" x="-50%" width="200%" y="-50%" height="200%"
-                                color-interpolation-filters="sRGB">
-                                <feGaussianBlur in="SourceGraphic" stdDeviation="1.25" result="blur" />
-                                <feColorMatrix in="blur" mode="matrix"
-                                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" />
-                            </filter>
-                            <filter id="goo-big" x="-50%" width="200%" y="-50%" height="200%"
-                                color-interpolation-filters="sRGB">
-                                <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
-                                <feColorMatrix in="blur" mode="matrix"
-                                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" />
-                            </filter>
-                        </defs>
-                    </svg>
                     <div id = "moves">Moves: ${moves}</div>`
   }
 }
@@ -539,18 +479,4 @@ function shuffle(x) {
     x.splice(n, 1)
   }
   return a
-}
-/* 显示规则 */
-window.ShowRules = function () {
-  document.getElementById("rules-page").style.display = "block"
-  setTimeout(function () {
-    document.getElementById("rules-page").style.opacity = "1"
-  }, 50)
-}
-/* 隐藏规则 */
-window.HideRules = function () {
-  setTimeout(function () {
-    document.getElementById("rules-page").style.display = "none"
-  }, 500)
-  document.getElementById("rules-page").style.opacity = "0"
 }
